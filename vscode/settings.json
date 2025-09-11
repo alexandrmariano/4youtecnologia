@@ -1,0 +1,9 @@
+{
+  /*  SHIFT + ALT + A - Para comentario em linhas */
+  "editor.wordWrap": "on", //quebra de linha para nao gerar barra de rolagem
+  "files.autoSave": "afterDelay", //salvamento automatico
+  "files.autoSaveDelay": 100, // em milisegundos
+  "editor.formatOnSave": true, // identação para blocos dos codigos
+  "editor.fontSize": 16 // tamanho da fonte
+  
+}
