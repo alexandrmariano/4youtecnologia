@@ -1,0 +1,9 @@
+/* Reset CSS */ /* ALT + SHIFT + A = Comentario */
+* {
+    margin: 0; /* Margem Externa */
+    padding: 0; 
+}
+
+body {
+    background: gray;
+}
