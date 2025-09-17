@@ -1,9 +1,21 @@
 /* Reset CSS */ /* ALT + SHIFT + A = Comentario */
 * {
-    margin: 0; /* Margem Externa */
-    padding: 0; 
+  margin: 0; /* Margem Externa */
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-    background: gray;
+  background: #bbbbbb;
+}
+
+header {
+  /* FLEXBOX */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 0.5rem 1rem; /* 1 rem = 16 pixels */
+  border-bottom: .1px solid #000;
+
 }
