@@ -25,11 +25,17 @@ header {
   display: none;
 }
 
+/* ul */
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 1.2rem;
+}
 
-
-
-
-
+/* a */
+.text_link {
+  text-decoration: none;
+}
 
 
 
