@@ -1,3 +1,15 @@
+
+/* Color -> Dark */
+:root,
+:root[data-theme='dark'] {
+  --cor-fundo: #bbbbbb;  
+}
+/* Color -> Ligth */
+:root,
+:root[data-theme='ligth']{
+  --cor-fundo: #ffffff; 
+}
+
 /* Reset CSS */ /* ALT + SHIFT + A = Comentario */
 * {
   margin: 0; /* Margem Externa */
@@ -6,7 +18,7 @@
 }
 
 body {
-  background: #bbbbbb;
+  background: var(--cor-fundo);
 }
 
 header {
