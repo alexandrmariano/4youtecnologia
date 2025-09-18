@@ -37,7 +37,10 @@ header {
   text-decoration: none;
 }
 
-
+.menu-text {
+  text-transform: uppercase;
+  
+}
 
 
 
