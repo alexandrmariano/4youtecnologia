@@ -1,16 +1,22 @@
-
 /* Color -> Dark */
 :root,
-:root[data-theme='dark'] {
-  --cor-fundo: #bbbbbb;  
-}
-/* Color -> Ligth */
-:root,
-:root[data-theme='ligth']{
-  --cor-fundo: #ffffff; 
+:root[data-theme="dark"] {
+  --cor-fundo: #bbbbbb;
+  --cor-text-menu-link: #ffffff;
+  --cor-border-botton: #ffffff;
+  --cor-icon-theme: #ffffff;
 }
 
-/* Reset CSS */ /* ALT + SHIFT + A = Comentario */
+/* Color -> Ligth */
+:root,
+:root[data-theme="ligth"] {
+  --cor-fundo: #ffffff;
+  --cor-text-menu-link: #000000;
+  --cor-border-botton: #000000;
+  --cor-icon-theme: #000000;
+}
+
+/* Reset CSS */
 * {
   margin: 0; /* Margem Externa */
   padding: 0;
@@ -28,8 +34,10 @@ header {
   align-items: center;
   width: 100%;
   padding: 0.5rem 1rem; /* 1 rem = 16 pixels */
-  border-bottom: 0.1px solid #000;
+  border-bottom: 0.1px solid var(--cor-border-botton);
   position: fixed;
+  z-index: 9999; /* CAMADAS */
+  background: var(--cor-fundo);
 }
 
 /* nav */
@@ -51,25 +59,30 @@ header {
 
 .menu-text {
   text-transform: uppercase;
-  
+  color: var(--cor-text-menu-link);
 }
 
+#toggleTheme {
+  color: var(--cor-icon-theme);
+  font-size: 16px;
+  cursor: pointer; /* seta-mouse */
+}
 
-
-
-
-
-
-
-
-
-
-
+.menu-mobile {
+  position: fixed;
+  top: 0;
+  right: 0;
+  transform: translateX();
+  background: red;
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+}
 
 /* Responsividade */
 /* A partir de 768 voltar tela em flex */
 @media (min-width: 768px) {
   .menu-desktop {
-    display: flex ;
+    display: flex;
   }
 }
