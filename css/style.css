@@ -55,7 +55,7 @@ header {
 }
 
 /* a */
-.menu_link {
+.menu-link {
   text-decoration: none;
 }
 
@@ -120,8 +120,8 @@ header {
 }
 
 /* Herança */
-.menu_link.active .menu-text,
-.menu_link:hover .menu-text {
+.menu-link.active .menu-text,
+.menu-link:hover .menu-text {
   color: red;
 }
 
