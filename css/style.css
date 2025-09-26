@@ -1,138 +1,179 @@
-/* Google Fonts */
+/* ==============================
+   IMPORTAÇÃO DE FONTES GOOGLE
+   ============================== */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Varta:wght@300..700&family=Yrsa:ital,wght@0,300..700;1,300..700&display=swap');
 
 /* 
-Roboto
-font-family: "Roboto", sans-serif;
-
-Varta
-font-family: "Varta", sans-serif;
-
-Source Serif 4
-font-family: "Source Serif 4", serif;
-
-Yrsa
-font-family: "Yrsa", serif;
+Referências de uso das fontes:
+Roboto         → font-family: "Roboto", sans-serif;
+Varta          → font-family: "Varta", sans-serif;
+Source Serif 4 → font-family: "Source Serif 4", serif;
+Yrsa           → font-family: "Yrsa", serif;
 */
 
 
-/* Color -> Dark */
+/* ==============================
+   VARIÁVEIS DE CORES (DARK MODE)
+   ============================== */
 :root,
 :root[data-theme="dark"] {
   --cor-fundo: #bbbbbb;
   --cor-fundo-secundario: #aaaaaa;
-  --cor-text-menu-link: #ffffff;
+  --cor-text-menu-link: #8a8a8a;
   --cor-border-botton: #ffffff;
   --cor-icon-theme: #ffffff;
+  --cor-icon-theme-hover: #8a8a8a;
   --cor-titulo-h1: #eeeeee;
   --cor-textos: #eeeeee;
+  --hover-link: #f0f0f0;
+
 }
 
-/* Color -> Ligth */
+/* ==============================
+   VARIÁVEIS DE CORES (LIGHT)
+   ============================== */
 :root,
 :root[data-theme="light"] {
   --cor-fundo: #ffffff;
-  --cor-fundo-secundario: #eeeeee;
-  --cor-text-menu-link: #000000;
+  --cor-fundo-secundario: #a3a3a3;
+  --cor-text-menu-link: #8a8a8a;
   --cor-borda: #000000;
   --cor-icon-theme: #000000;
+  --cor-icon-theme-hover: #a3a3a3;
   --cor-titulo-h1: #000000;
   --cor-textos: #000000;
+  --hover-link: #000000;
+
 }
 
-/* Fontes */
+/* ==============================
+   VARIÁVEIS DE FONTES
+   ============================== */
 :root {
-  --fonte-titulo-h1: "Roboto", sans-serif;
-  --fonte-textos: "Varta", sans-serif;
-  --fonte-subtitulo-h2: "Source Serif 4", serif;
+  --fonte-titulo-h1: "Source Serif 4", serif;
+  --fonte-textos: "Roboto", sans-serif;
+  --fonte-subtitulo-h2: "Varta", sans-serif;
   --fonte-subtitulo-h3: "Yrsa", serif;
 }
 
-/* Aparencia/Efeito Barra Rolagem */
+/* ==============================
+   CONFIGURAÇÃO DA ROLAGEM
+   ============================== */
 html {
   scroll-behavior: smooth;
-  /* Efeito / Comportamento */
+  /* rolagem suave ao clicar em links */
   scrollbar-width: thin;
+  /* largura da barra de rolagem */
   scrollbar-color: var(--cor-fundo-secundario) transparent;
+  /* cor da barra */
 }
 
-/* Reset CSS */
+/* ==============================
+   RESET CSS (zerar margens/paddings)
+   ============================== */
 * {
   margin: 0;
-  /* Margem Externa */
   padding: 0;
   box-sizing: border-box;
 }
 
+/* ==============================
+   BODY
+   ============================== */
 body {
   background: var(--cor-fundo);
 }
 
+/* ==============================
+   HEADER (TOPO)
+   ============================== */
 header {
-  /* FLEXBOX */
   display: flex;
+  /* usar flexbox */
   justify-content: space-between;
+  /* espaço entre logo, menu e botões */
   align-items: center;
   width: 100%;
   padding: 0.5rem 1rem;
-  /* 1 rem = 16 pixels */
+  /* espaçamento interno */
   border-bottom: 0.1px solid var(--cor-borda);
   position: fixed;
+  /* fixo no topo */
   z-index: 9999;
-  /* CAMADAS */
+  /* fica acima de outros elementos */
   background: var(--cor-fundo);
 }
 
-/* nav */
+/* ==============================
+   MENU DESKTOP (inicialmente oculto no mobile)
+   ============================== */
 .menu-desktop {
   display: none;
 }
 
-/* ul */
+/* ==============================
+   LISTA DE MENU (usada em desktop e mobile)
+   ============================== */
 .menu {
   display: flex;
   list-style: none;
+  /* remove bolinhas */
   gap: 1.2rem;
+  /* espaçamento entre itens */
 }
 
-/* a */
+/* Links do menu */
 .menu-link {
   text-decoration: none;
+  /* remove sublinhado */
 }
 
 .menu-text {
   text-transform: uppercase;
+  /* tudo maiúsculo */
   color: var(--cor-text-menu-link);
+  font-family: var(--fonte-textos);
 }
 
+/* Ícone de alternar tema */
 #toggleTheme {
   color: var(--cor-icon-theme);
   font-size: 16px;
   cursor: pointer;
-  /* seta-mouse */
+  /* muda cursor para "mãozinha" */
 }
 
+#toggleTheme:hover {
+  color: var(--cor-icon-theme-hover);
+}
+
+/* ==============================
+   MENU MOBILE (abre lateralmente)
+   ============================== */
 .menu-mobile {
   position: fixed;
   top: 0;
   right: 0;
   transform: translateX(100%);
+  /* escondido fora da tela */
   background: var(--cor-fundo-secundario);
   width: 35%;
+  max-width: 320px;
   display: flex;
   flex-direction: column;
-  max-width: 320px;
   padding-top: 4rem;
   height: 100vh;
-  /* Viewport Height */
+  /* ocupa a tela toda em altura */
   border-left: 1px solid var(--cor-borda);
   align-items: center;
 }
 
+/* Quando ativo, o menu aparece */
 .menu-mobile.active {
   transform: translateX(0);
 }
 
+/* Lista do menu mobile (vertical) */
 .menu-list {
   display: flex;
   flex-direction: column;
@@ -140,35 +181,43 @@ header {
   list-style: none;
 }
 
+/* Botão de abrir/fechar menu no mobile */
 .btn-menu-mobile {
   background: transparent;
   border: none;
   color: var(--cor-icon-theme);
   font-size: 16px;
   margin-left: 1rem;
+  display: flex;
   align-items: center;
   justify-content: center;
-  display: flex;
   padding: 0.5rem;
 }
 
+/* Container para os botões do header */
 .header-toggle {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+/* Itens centralizados */
 .menu-item {
   text-align: center;
 }
 
-/* Herança */
+/* ==============================
+   ESTILOS DE ESTADO (hover/ativo)
+   ============================== */
 .menu-link.active .menu-text,
 .menu-link:hover .menu-text {
   color: blue;
+  /* destaque ao passar o mouse ou ativo */
 }
 
-/* h1 Base */
+/* ==============================
+   TITULOS & TEXTOS
+   ============================== */
 h1 {
   font-size: 2.5rem;
   color: var(--cor-titulo-h1);
@@ -179,36 +228,46 @@ p {
   color: var(--cor-textos);
 }
 
-/* Reaproveitar para as seções */
+/* ==============================
+   SEÇÃO HOME
+   ============================== */
 #home {
   padding: 3.5rem 1rem;
-}
-
-/* FlexBox da HOME */
-#home {
   display: flex;
   flex-direction: column;
 }
 
-
-
-.main.comtent {
+/* Conteúdo principal dentro da home */
+.main-content {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
+/* Ícones das redes sociais */
+.menu-social i {
+  color: var(--cor-icon-theme-hover);
+  font-size: 1.2rem;
+}
 
+.menu-social i:hover {
+  color: var(--hover-link);
+}
 
-/* Responsividade */
-/* A partir de 768 voltar tela em flex */
+/* ==============================
+   RESPONSIVIDADE
+   ============================== */
+
+/* Telas a partir de 768px (tablet/desktop pequeno) */
 @media (min-width: 768px) {
   .menu-desktop {
     display: flex;
+    /* exibe menu desktop */
   }
 
   .btn-menu-mobile {
     display: none;
+    /* esconde botão mobile */
   }
 
   h1 {
@@ -216,14 +275,14 @@ p {
   }
 }
 
-/* Tela 992 */
+/* Telas a partir de 992px (desktop médio) */
 @media (min-width: 992px) {
   h1 {
     font-size: 6rem;
   }
 }
 
-/* Tela 1400 */
+/* Telas a partir de 1400px (desktop grande) */
 @media (min-width: 1400px) {
   h1 {
     font-size: 7rem;
