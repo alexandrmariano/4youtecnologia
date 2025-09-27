@@ -56,6 +56,10 @@ Yrsa           → font-family: "Yrsa", serif;
   --fonte-subtitulo-h3: "Yrsa", serif;
 }
 
+html [data-theme="light"] .logo {
+  filter: invert(1);
+}
+
 /* ==============================
    CONFIGURAÇÃO DA ROLAGEM
    ============================== */
@@ -102,6 +106,11 @@ header {
   z-index: 9999;
   /* fica acima de outros elementos */
   background: var(--cor-fundo);
+}
+
+.logo {
+  width: 7rem ; /* Largura */
+  height: auto; /* Altuta */
 }
 
 /* ==============================
@@ -254,6 +263,7 @@ p {
   color: var(--hover-link);
 }
 
+
 /* ==============================
    RESPONSIVIDADE
    ============================== */
@@ -272,6 +282,10 @@ p {
 
   h1 {
     font-size: 5rem;
+  }
+
+  .header-logo {
+    min-width: 25%;
   }
 }
 

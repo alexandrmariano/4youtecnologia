@@ -1,91 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-br" data-theme="dark">
-  <!-- Definição do idioma da página e tema padrão -->
-  <head>
-    <meta charset="UTF-8" />
-    <!-- Configuração de escala para dispositivos móveis -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Título exibido na aba do navegador -->
-    <title>4You Tecnologia</title>
-    
-    <!-- Arquivo CSS principal -->
-    <link rel="stylesheet" href="css/style.css" />
+<!-- Definição do idioma da página e tema padrão -->
 
-    <!-- Biblioteca de ícones Bootstrap -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
-    />
-    <!-- Referência: https://icons.getbootstrap.com/#install -->
-  </head>
-  <body>
-    <!-- ================= CABEÇALHO ================= -->
-    <header>
-      <!-- MENU DE NAVEGAÇÃO DESKTOP -->
-      <nav class="menu-desktop">
-        <ul class="menu menu-principal">
-          <li>
-            <a href="#home" class="menu-link active">
-              <span class="menu-text"> HOME </span>
-            </a>
-          </li>
-          <li>
-            <a href="#servicos" class="menu-link">
-              <span class="menu-text"> SERVIÇOS </span>
-            </a>
-          </li>
-          <li>
-            <a href="#sobre" class="menu-link">
-              <span class="menu-text"> SOBRE </span>
-            </a>
-          </li>
-          <li>
-            <a href="#contato" class="menu-link">
-              <span class="menu-text"> CONTATO </span>
-            </a>
-          </li>
-        </ul>
-      </nav>
+<head>
+  <meta charset="UTF-8" />
+  <!-- Configuração de escala para dispositivos móveis -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- Título exibido na aba do navegador -->
+  <title>4You Tecnologia</title>
 
-      <!-- LOGO DA EMPRESA -->
-      <div>
-        <a href="#home">
-          <img src="logo.png" />
-        </a>
-      </div>
+  <!-- Arquivo CSS principal -->
+  <link rel="stylesheet" href="css/style.css" />
 
-      <!-- BOTÕES DE AÇÕES DO HEADER -->
-      <div class="header-toggle">
-        <!-- Ícone para alternar o tema (claro/escuro) -->
-        <i class="bi bi-sun" id="toggleTheme"></i>
+  <!-- Biblioteca de ícones Bootstrap -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
+  <!-- Referência: https://icons.getbootstrap.com/#install -->
+</head>
 
-        <!-- Botão de menu para dispositivos móveis -->
-        <button id="menuHamburger" class="btn-menu-mobile">
-          <!-- Ícone do menu tipo "hamburger" -->
-          <i class="bi bi-list"></i>
-        </button>
-      </div>
-    </header>
-
-    <!-- ================= MENU MOBILE ================= -->
-    <nav id="menuMobile" class="menu menu-mobile">
-      <ul class="menu-list">
-        <li class="menu-item">
+<body>
+  <!-- ================= CABEÇALHO ================= -->
+  <header>
+    <!-- MENU DE NAVEGAÇÃO DESKTOP -->
+    <nav class="menu-desktop">
+      <ul class="menu menu-principal">
+        <li>
           <a href="#home" class="menu-link active">
             <span class="menu-text"> HOME </span>
           </a>
         </li>
-        <li class="menu-item">
+        <li>
           <a href="#servicos" class="menu-link">
             <span class="menu-text"> SERVIÇOS </span>
           </a>
         </li>
-        <li class="menu-item">
+        <li>
           <a href="#sobre" class="menu-link">
             <span class="menu-text"> SOBRE </span>
           </a>
         </li>
-        <li class="menu-item">
+        <li>
           <a href="#contato" class="menu-link">
             <span class="menu-text"> CONTATO </span>
           </a>
@@ -93,77 +46,124 @@
       </ul>
     </nav>
 
-    <!-- ================= CONTEÚDO PRINCIPAL ================= -->
-    <main id="home">
-      <!-- Carrossel Bootstrap (Slides/Banners) -->
-      <section id="carouselBootstrap">
-        <!-- Aqui você pode inserir o componente de slide -->
-      </section>
+    <!-- LOGO DA EMPRESA -->
+    <div class="header-logo">
+      <a href="#home">
+        <img src="img/logo.png" class="logo" />
+      </a>
+    </div>
 
-      <!-- SLOGAN / FRASE DE IMPACTO -->
-      <div class="main-content">
-        <h1>
-          Soluções Inteligentes Para Sua Empresa
-        </h1>
-        <p>
-          4You Tecnologia, São Paulo, SP
-        </p>
+    <!-- BOTÕES DE AÇÕES DO HEADER -->
+    <div class="header-toggle">
+      <!-- Ícone para alternar o tema (claro/escuro) -->
+      <i class="bi bi-sun" id="toggleTheme"></i>
 
-        <!-- LINKS PARA REDES SOCIAIS -->
-        <ul class="menu menu-social">
-          <!-- GitHub -->
-          <li>
-            <a href="https://github.com/alexandrmariano" target="_blank">
-              <i class="bi bi-github"></i>
-            </a>
-          </li>
-          <!-- Instagram -->
-          <li>
-            <a href="">
-              <i class="bi bi-instagram"></i>
-            </a>
-          </li>
-          <!-- LinkedIn -->
-          <li>
-            <a href="">
-              <i class="bi bi-linkedin"></i>
-            </a>
-          </li>
-          <!-- WhatsApp -->
-          <li>
-            <a href="https://wa.me/5511965757855" target="_blank">
-              <i class="bi bi-whatsapp"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </main>
+      <!-- Botão de menu para dispositivos móveis -->
+      <button id="menuHamburger" class="btn-menu-mobile">
+        <!-- Ícone do menu tipo "hamburger" -->
+        <i class="bi bi-list"></i>
+      </button>
+    </div>
+  </header>
 
-    <!-- ================= SEÇÕES DA PÁGINA ================= -->
-    
-    <!-- SERVIÇOS -->
-    <section id="servicos" class="servicos">
-      SERVIÇOS
+  <!-- ================= MENU MOBILE ================= -->
+  <nav id="menuMobile" class="menu menu-mobile">
+    <ul class="menu-list">
+      <li class="menu-item">
+        <a href="#home" class="menu-link active">
+          <span class="menu-text"> HOME </span>
+        </a>
+      </li>
+      <li class="menu-item">
+        <a href="#servicos" class="menu-link">
+          <span class="menu-text"> SERVIÇOS </span>
+        </a>
+      </li>
+      <li class="menu-item">
+        <a href="#sobre" class="menu-link">
+          <span class="menu-text"> SOBRE </span>
+        </a>
+      </li>
+      <li class="menu-item">
+        <a href="#contato" class="menu-link">
+          <span class="menu-text"> CONTATO </span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- ================= CONTEÚDO PRINCIPAL ================= -->
+  <main id="home">
+    <!-- Carrossel Bootstrap (Slides/Banners) -->
+    <section id="carouselBootstrap">
+      <!-- Aqui você pode inserir o componente de slide -->
     </section>
 
-    <!-- SOBRE -->
-    <section id="sobre" class="sobre">
-      SOBRE
-    </section>
+    <!-- SLOGAN / FRASE DE IMPACTO -->
+    <div class="main-content">
+      <h1>
+        Soluções Inteligentes Para Sua Empresa
+      </h1>
+      <p>
+        4You Tecnologia, São Paulo, SP
+      </p>
 
-    <!-- CONTATO -->
-    <section id="contato" class="contato">
-      CONTATO
-    </section>
+      <!-- LINKS PARA REDES SOCIAIS -->
+      <ul class="menu menu-social">
+        <!-- GitHub -->
+        <li>
+          <a href="https://github.com/alexandrmariano" target="_blank">
+            <i class="bi bi-github"></i>
+          </a>
+        </li>
+        <!-- Instagram -->
+        <li>
+          <a href="">
+            <i class="bi bi-instagram"></i>
+          </a>
+        </li>
+        <!-- LinkedIn -->
+        <li>
+          <a href="">
+            <i class="bi bi-linkedin"></i>
+          </a>
+        </li>
+        <!-- WhatsApp -->
+        <li>
+          <a href="https://wa.me/5511965757855" target="_blank">
+            <i class="bi bi-whatsapp"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </main>
 
-    <!-- ================= RODAPÉ ================= -->
-    <footer>
-      <p> Criado por Alexandre Mariano - Set 2025 &copy; </p>
-    </footer>
+  <!-- ================= SEÇÕES DA PÁGINA ================= -->
 
-    <!-- Arquivo JavaScript principal -->
-    <script src="js/script.js"></script>
-  </body>
+  <!-- SERVIÇOS -->
+  <section id="servicos" class="servicos">
+    SERVIÇOS
+  </section>
+
+  <!-- SOBRE -->
+  <section id="sobre" class="sobre">
+    SOBRE
+  </section>
+
+  <!-- CONTATO -->
+  <section id="contato" class="contato">
+    CONTATO
+  </section>
+
+  <!-- ================= RODAPÉ ================= -->
+  <footer>
+    <p> Criado por Alexandre Mariano - Set 2025 &copy; </p>
+  </footer>
+
+  <!-- Arquivo JavaScript principal -->
+  <script src="js/script.js"></script>
+</body>
+
 </html>
 
 <!-- DICAS RÁPIDAS NO VS CODE:
