@@ -86,6 +86,7 @@ html {
    ============================== */
 body {
   background: var(--cor-fundo);
+  color: var(--cor-textos); /* Vale para todos textos do site */
 }
 
 /* ==============================
@@ -170,7 +171,7 @@ header {
   max-width: 320px;
   display: flex;
   flex-direction: column;
-  padding-top: 4rem;
+  padding-top: 6rem;
   height: 100vh;
   /* ocupa a tela toda em altura */
   border-left: 1px solid var(--cor-borda);
@@ -200,7 +201,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0.5rem;
+  padding: 0rem;
 }
 
 /* Container para os botões do header */
@@ -241,7 +242,7 @@ p {
    SEÇÃO HOME
    ============================== */
 #home {
-  padding: 3.5rem 1rem;
+  padding: 5rem 1rem;
   display: flex;
   flex-direction: column;
 }
