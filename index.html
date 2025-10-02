@@ -1,26 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-br" data-theme="dark">
-<!-- Definição do idioma da página e tema padrão -->
+<!-- Definição do idioma da página (português-BR) e tema inicial (dark) -->
 
 <head>
   <meta charset="UTF-8" />
-  <!-- Configuração de escala para dispositivos móveis -->
+  <!-- Configuração de responsividade para dispositivos móveis -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <!-- Título exibido na aba do navegador -->
   <title>4You Tecnologia</title>
 
-  <!-- Arquivo CSS principal -->
+  <!-- Arquivo CSS principal da aplicação -->
   <link rel="stylesheet" href="css/style.css" />
 
-  <!-- Biblioteca de ícones Bootstrap -->
+  <!-- Biblioteca de ícones do Bootstrap -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" />
-  <!-- Referência: https://icons.getbootstrap.com/#install -->
+  <!-- Documentação: https://icons.getbootstrap.com/#install -->
 </head>
 
 <body>
   <!-- ================= CABEÇALHO ================= -->
   <header>
-    <!-- MENU DE NAVEGAÇÃO DESKTOP -->
+    <!-- Menu de navegação (versão desktop) -->
     <nav class="menu-desktop">
       <ul class="menu menu-principal">
         <li>
@@ -46,22 +47,21 @@
       </ul>
     </nav>
 
-    <!-- LOGO DA EMPRESA -->
+    <!-- Logo da empresa -->
     <div class="header-logo">
       <a href="#home">
         <img src="img/logo.png" class="logo" />
       </a>
     </div>
 
-    <!-- BOTÕES DE AÇÕES DO HEADER -->
+    <!-- Botões de ação no cabeçalho -->
     <div class="header-toggle">
-      <!-- Ícone para alternar o tema (claro/escuro) -->
+      <!-- Alternar entre modo claro/escuro -->
       <i class="bi bi-sun" id="toggleTheme"></i>
 
       <!-- Botão de menu para dispositivos móveis -->
       <button id="menuHamburger" class="btn-menu-mobile">
-        <!-- Ícone do menu tipo "hamburger" -->
-        <i class="bi bi-list"></i>
+        <i class="bi bi-list"></i> <!-- Ícone do menu tipo "hamburger" -->
       </button>
     </div>
   </header>
@@ -94,12 +94,12 @@
 
   <!-- ================= CONTEÚDO PRINCIPAL ================= -->
   <main id="home">
-    <!-- Carrossel Bootstrap (Slides/Banners) -->
+    <!-- Carrossel Bootstrap (para slides/banners de destaque) -->
     <section id="carouselBootstrap">
-      <!-- Aqui você pode inserir o componente de slide -->
+      <!-- Espaço reservado para um componente de carrossel -->
     </section>
 
-    <!-- SLOGAN / FRASE DE IMPACTO -->
+    <!-- Texto principal (slogan / chamada de impacto) -->
     <div class="main-content">
       <h1>
         Soluções Inteligentes Para Sua Empresa
@@ -108,7 +108,7 @@
         4You Tecnologia, São Paulo, SP
       </p>
 
-      <!-- LINKS PARA REDES SOCIAIS -->
+      <!-- Links de redes sociais -->
       <ul class="menu menu-social">
         <!-- GitHub -->
         <li>
@@ -136,7 +136,9 @@
         </li>
       </ul>
     </div>
-    <div class="video"> <!-- div.video -->
+
+    <!-- Vídeo incorporado do YouTube -->
+    <div class="video">
       <iframe src="https://www.youtube.com/embed/gFwhQ1pn06U"
         title="Acronis Cyber Protect Cloud   Advanced Security + EDR" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -144,6 +146,7 @@
     </div>
   </main>
 
+  <!-- Descrição do vídeo -->
   <section class="descricao-video">
     <h2>
       Acronis Cyber Security + EDR
@@ -157,85 +160,52 @@
     <h2>SERVIÇOS</h2>
     <div class="servicos-container">
 
-      <!-- 1ª serviço -->
-      <div class="projeto-card">
-        <img src="img/Servicos/Antivirus.jpeg" alt="Escudo azul digital com cadeado, simbolizando proteção cibernética"
-          title="Escudo azul digital com cadeado, simbolizando antivírus">
+      <!-- 1º Serviço -->
+      <div class="servico-card">
+        <img src="img/Servicos/Antivirus.jpeg" alt="Antivírus" title="Antivírus" class="img-card">
         <div class="card-body">
-          <h3 class="card-antivirus">Antivírus</h3>
-          <p class="card-descricao">Soluções em melhores Antivírus do mercado.</p>
+          <h3 class="card-titulo">Antivírus</h3>
+          <p class="card-descricao">Soluções com os melhores antivírus do mercado.</p>
           <ul class="card-list">
-            <li class="card-item">
-              <i class="bi bi-caret-right"></i>
-              Acronis
-            </li>
-            <li class="card-item">
-              <i class="bi bi-caret-right"></i>
-              Kaspersky
-            </li>
-            <li class="card-item">
-              <i class="bi bi-caret-right"></i>
-              Symantec
-            </li>
-          </ul>
+            <li class="card-item"><i class="bi bi-caret-right"></i> Acronis</li>
+            <li class="card-item"><i class="bi bi-caret-right"></i> Kaspersky</li>
+            <li class="card-item"><i class="bi bi-caret-right"></i> Symantec</li>
           </ul>
         </div>
       </div>
-      <!-- Fin 1º servico -->
+      <!-- Fim 1º Serviço -->
 
-      <!-- 2ª serviço -->
-      <div class="projeto-card">
-        <img src="img/Servicos/Backup_Nuvem.jpg" alt="Backup em nuvem" title="Backup em nuvem">
+      <!-- 2º Serviço -->
+      <div class="servico-card">
+        <img src="img/Servicos/Backup_Nuvem.jpg" alt="Cloud Backup" title="Cloud Backup" class="img-card">
         <div class="card-body">
-          <h3 class="card-antivirus">Cloud Backup</h3>
-          <p class="card-descricao">Soluções em Clouds Backup de alta confiabolidade.</p>
+          <h3 class="card-titulo">Cloud Backup</h3>
+          <p class="card-descricao">Soluções em backup na nuvem de alta confiabilidade.</p>
           <ul class="card-list">
-            <li class="card-item">
-              <i class="bi bi-caret-right"></i>
-              Acronis
-            </li>
-            <li class="card-item">
-              <i class="bi bi-caret-right"></i>
-              AWS
-            </li>
-            <li class="card-item">
-              <i class="bi bi-caret-right"></i>
-              Entra Backup
-            </li>
-          </ul>
+            <li class="card-item"><i class="bi bi-caret-right"></i> Acronis</li>
+            <li class="card-item"><i class="bi bi-caret-right"></i> AWS</li>
+            <li class="card-item"><i class="bi bi-caret-right"></i> Entra Backup</li>
           </ul>
         </div>
       </div>
-      <!-- Fin 2º servico -->
+      <!-- Fim 2º Serviço -->
 
-      <!-- 3ª serviço -->
-      <div class="projeto-card">
-        <img src="img/Servicos/CyberSecurity.jpg" alt="CyberSecurity" title="CyberSecurity">
+      <!-- 3º Serviço -->
+      <div class="servico-card">
+        <img src="img/Servicos/CyberSecurity.jpg" alt="Cyber Security" title="Cyber Security" class="img-card">
         <div class="card-body">
-          <h3 class="card-antivirus">CyberSecurity</h3>
-          <p class="card-descricao">Soluções em Firewall e UTM de ultima geração.</p>
+          <h3 class="card-titulo">CyberSecurity</h3>
+          <p class="card-descricao">Soluções em Firewall e UTM de última geração.</p>
           <ul class="card-list">
-            <li class="card-item">
-              <i class="bi bi-caret-right"></i>
-              Fortgate
-            </li>
-            <li class="card-item">
-              <i class="bi bi-caret-right"></i>
-              Sophos
-            </li>
-            <li class="card-item">
-              <i class="bi bi-caret-right"></i>
-              SonicWALL
-            </li>
-          </ul>
+            <li class="card-item"><i class="bi bi-caret-right"></i> Fortigate</li>
+            <li class="card-item"><i class="bi bi-caret-right"></i> Sophos</li>
+            <li class="card-item"><i class="bi bi-caret-right"></i> SonicWALL</li>
           </ul>
         </div>
       </div>
-      <!-- Fin 3º servico -->
+      <!-- Fim 3º Serviço -->
 
     </div>
-
-
   </section>
 
   <!-- SOBRE -->
@@ -260,9 +230,9 @@
 </html>
 
 <!-- DICAS RÁPIDAS NO VS CODE:
-     ALT + SHIFT + A = Comentário
-     ALT + SHIFT + F = Identação
+     ALT + SHIFT + A = Comentário em bloco
+     ALT + SHIFT + F = Identação automática
      SHIFT + ! = Estrutura básica HTML
-     ul>li*3 = repetição de estrutura
-     ul.card-list>li.card-item*3
-     -->
+     ul>li*3 = Cria lista com 3 itens
+     ul.card-list>li.card-item*3 = Cria lista formatada com classes
+-->

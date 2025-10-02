@@ -238,13 +238,34 @@ p {
   color: var(--cor-textos);
 }
 
+h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-family: var(--fonte-subtitulo-h2);
+  /* font-weight: ; */
+  /* letter-spacing: ; */
+  /* color: ; */
+ }
+
+/* ==============================
+   SEÇÓES SERVICOS, SOBRE e CONTATO
+   ============================== */
+
+#home, 
+.servicos,
+.sobre,
+.contato {
+  padding: 3.5rem 1rem;
+}
+
 /* ==============================
    SEÇÃO HOME
    ============================== */
+
 #home {
-  padding: 5rem 1rem;
   display: flex;
   flex-direction: column;
+  gap: 2rem;
 }
 
 /* Conteúdo principal dentro da home */
@@ -264,13 +285,91 @@ p {
   color: var(--hover-link);
 }
 
+.descricao-video {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 1.25rem;
+  padding: 6.25rem 1rem 2rem;
+  background: #626262;
+  margin-top: -7.5rem;
+}
+
+.video iframe {
+  aspect-ratio: 16/9;
+  /* width: 100%; */
+}
+
+.descricao-video h2 {
+  font-size: 1.4rem;
+  text-transform: normal;
+  letter-spacing: 2px;
+  font-family: var(--fonte-subtitulo-h2);
+  text-align: center;
+  margin-top: -1rem;
+}
+
+/* ==============================
+   SERVIÇOS
+   ============================== */
+
+.servicos {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;  
+}
+
+.servicos-container {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;  
+}
+
+.servico-card {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.img-card {
+  width: 100%;
+  border-radius: 2rem;
+  box-shadow: -10px 10px #757575;
+  pointer-events: none;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.card-item {
+  list-style: none;
+}
 
 /* ==============================
    RESPONSIVIDADE
    ============================== */
 
+@media (max-width: 768px) {
+  #home {
+    padding-top: 6rem;
+  }
+}
+
+
 /* Telas a partir de 768px (tablet/desktop pequeno) */
 @media (min-width: 768px) {
+  header {
+    padding: 1rem 3rem;
+  }
+
   .menu-desktop {
     display: flex;
     /* exibe menu desktop */
@@ -288,12 +387,35 @@ p {
   .header-logo {
     min-width: 25%;
   }
+  #home,
+  .projetos,
+  .sobre {
+    padding: 8rem, 6rem, 4rem, 6rem;
+  }
+
+  .main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .descricao-video {
+    padding: 6.25rem 6rem 2rem 6rem;
+  }
+
 }
+
 
 /* Telas a partir de 992px (desktop médio) */
 @media (min-width: 992px) {
   h1 {
     font-size: 6rem;
+  }
+  .servico-card {
+    flex-direction: row;
+  }
+  .img-card {
+    width: 55%
   }
 }
 
@@ -301,5 +423,9 @@ p {
 @media (min-width: 1400px) {
   h1 {
     font-size: 7rem;
+  }
+  .descricao-video h2 {
+    font-size: 3rem;
+    text-align: start;
   }
 }
