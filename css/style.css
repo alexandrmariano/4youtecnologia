@@ -35,6 +35,7 @@ Referências de uso das fontes:
   /* Cor padrão de textos */
   --hover-link: #f0f0f0;
   /* Cor de hover em links */
+  --cor-link: 626262;
 }
 
 /* ==============================
@@ -272,6 +273,10 @@ h2 {
 h3 {
   font-size: 1.55rem;
   font-family: var(--fonte-subtitulo-h3);
+}
+
+.footer {
+  font-size: 1.1rem;
 }
 
 
@@ -543,6 +548,59 @@ h3 {
 }
 
 /* ==============================
+   CONTATO
+   ============================== */
+
+.contato {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1.5rem;
+  border-top: 1px solid var(--cor-borda);
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.contato p {
+  font-size: 1.4rem;
+  text-align: center;
+}
+
+.contato .btn-primario {
+  gap: 1rem;
+}
+
+.contato .email {
+  color: #626262;
+  text-decoration: none;
+  /* remover underline */
+}
+
+.contato .menu-link span {
+  color: var(--cor-link);
+}
+
+.contato .menu-link:hover i,
+.contato .menu-link:hover span {
+  color: var(--cor-icon-theme-hover);
+}
+
+.contato-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  width: 100%;
+  margin-top: 3rem;
+}
+
+.contato-formulario,
+.contato-mapa {
+  width: 100%;
+}
+
+
+
+/* ==============================
    RESPONSIVIDADE (MEDIA QUERIES)
    ============================== */
 
@@ -558,6 +616,15 @@ h3 {
 @media (min-width: 768px) {
   header {
     padding: 1rem 3rem;
+  }
+
+  .comtato-grid {
+    grid-template-columns: 100%;
+  }
+
+  .contato-formulario,
+  .contato-mapa {
+    width: 100%;
   }
 
   .menu-desktop {
