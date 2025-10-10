@@ -129,7 +129,6 @@ header {
   align-items: center;
   /* Alinhamento vertical */
   width: 100%;
-  padding: 0.5rem 1rem;
   border-bottom: 0.1px solid var(--cor-borda);
   position: fixed;
   /* Fixa no topo da página */
@@ -140,7 +139,7 @@ header {
 }
 
 .logo {
-  width: 7rem;
+  width: 8rem;
   /* Largura da logo */
   height: auto;
   /* Mantém proporção */
@@ -158,7 +157,7 @@ header {
   display: flex;
   list-style: none;
   /* Remove marcadores */
-  gap: 1.2rem;
+  gap: .75rem;
   /* Espaçamento entre itens */
 }
 
@@ -177,7 +176,7 @@ header {
 /* Botão de alternância de tema */
 #toggleTheme {
   color: var(--cor-icon-theme);
-  font-size: 16px;
+  font-size: 18px;
   cursor: pointer;
   /* Cursor tipo "mãozinha" */
 }
@@ -276,7 +275,10 @@ h3 {
 }
 
 .footer {
+  display: flex;
+  align-items: center;
   font-size: 1.1rem;
+  margin-bottom: 1.2rem;
 }
 
 
@@ -356,7 +358,7 @@ h3 {
 
 .btn-primario span,
 .btn-primario i {
-  color: blue;
+  color:var(--cor-textos);
 }
 
 .btn-primario:hover {
@@ -374,9 +376,9 @@ h3 {
   flex-direction: column;
   gap: 4rem;
   scroll-margin-top: 2.5rem;
-}
+} 
 
-.servicos-container {
+ .servicos-container {
   display: flex;
   flex-direction: column;
   gap: 5rem;
@@ -410,7 +412,7 @@ h3 {
 }
 
 .card-title {
-  color: #0000ff;
+  color: var(--cor-textos);
   font-size: 2rem;
   font-weight: 400;
 }
@@ -431,11 +433,15 @@ h3 {
 /* ==============================
    SOBRE
    ============================== */
+
 .sobre {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 1.5rem;
-  scroll-margin-top: 2.5rem;
+  border-top: 1px solid var(--cor-borda);
+  scroll-margin-top: -2rem;
 }
 
 .sobre-cotent1,
@@ -446,6 +452,9 @@ h3 {
 }
 
 .sobre-avatar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   border-radius: 2rem;
 }
@@ -453,7 +462,7 @@ h3 {
 .sobre-descricao {
   display: flex;
   flex-direction: column;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .sobre-icones,
@@ -487,6 +496,7 @@ h3 {
 
 .sobre-descricao-texto {
   text-align: justify;
+  font-size: 1.5rem;
 }
 
 /* ==============================
@@ -559,6 +569,7 @@ h3 {
   gap: 1.5rem;
   border-top: 1px solid var(--cor-borda);
   border-bottom: 1px solid var(--cor-borda);
+  scroll-margin-top: 3rem;
 }
 
 .contato p {
@@ -598,7 +609,56 @@ h3 {
   width: 100%;
 }
 
+.contato-formulario p {
+  padding: 1rem;
+}
 
+.form-contato {
+  /* background: gray; */
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-contato input,
+.form-contato textarea {
+  width: 100%;
+  padding: .75rem 1rem;
+  border-radius: .5rem;
+  font-size: 1rem;
+  color: black;
+  background: white;
+  border: 1px solid var(--cor-borda);
+}
+
+.form-contato input::placeholder,
+.form-contato textarea::placeholder {
+  font-size: 1rem;
+  font-family: var(--fonte-textos);
+  color: gray;
+  opacity: .7;
+}
+
+.form-contato textarea {
+  font-size: 1rem ;
+  font-family: var(--fonte-textos);
+  line-height: 1.5;
+}
+
+.form-contato button {
+  display: flex;
+  align-items: center;
+  align-self: flex-start;
+}
+
+.contato-mapa iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 400px;
+  border-radius: .75rem;
+  border: none;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.308f);
+}
 
 /* ==============================
    RESPONSIVIDADE (MEDIA QUERIES)

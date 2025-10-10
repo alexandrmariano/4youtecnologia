@@ -52,7 +52,7 @@
     <!-- Logo da empresa -->
     <div class="header-logo">
       <a href="#home">
-        <img src="img/logo.png" class="logo" alt="Logo 4You Tecnologia" />
+        <img src="img/logo.png" class="logo" alt="Logo 4You Tecnologia"/>
       </a>
     </div>
 
@@ -389,14 +389,15 @@
         <h2>Fale conosco</h2>
         <p>Nos contate para solicitações, elogios ou reclamações.</p>
 
-        <form action="" method="post">
-          <input type="text" placeholder="Digite seu mome completo *" required>
-          <input type="email" name="" id="" placeholder="Digite seu e-mail *" required>
-          <input type="tel" placeholder="Digite seu telefone *" required>
-          <input type="text" placeholder="Assunto *" required>
-          <textarea name="" id=""></textarea>
-          <button type="submit">
+        <form action="https://formspree.io/f/xanppqeq" method="post" class="form-contato">
+          <input type="text" name="nome" placeholder="Digite seu Nome completo *" required>
+          <input type="email" name="email" placeholder="Digite seu e-mail *" required>
+          <input type="tel" name="telefone" id="telefone" placeholder="Digite seu telefone *" required>
+          <input type="text" name="assunto" placeholder="Assunto *" required>
+          <textarea name="mensagem" id="" rows="6" placeholder="Mensagem *"></textarea>
+          <button type="submit" class="btn-primario">
             <span>Enviar</span>
+            <i class="bi bi-send"></i>
           </button>
         </form>
       </div>
@@ -414,7 +415,7 @@
 
   <!-- ===================== RODAPÉ ===================== -->
   <footer>
-    <p class="footer">Criado por Alexandre Mariano - Set 2025 &copy;</p>
+    <p class="footer">Desenvolvido por Alexandre Mariano &copy; - Out 2025</p>
   </footer>
 
   <!-- Importa o script JS principal -->
